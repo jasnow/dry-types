@@ -20,6 +20,12 @@ matrix:
 env:
   global:
     - COVERAGE=true
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+  include:
+    - rvm: jruby-9.2.8.0
+      jdk: openjdk8
 notifications:
   email: false
   webhooks:
